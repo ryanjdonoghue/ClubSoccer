@@ -1,2 +1,2 @@
-## Author: Nicholas Pai '17
+## Author: Ryan Donoghue '28 (Old website author: Nicholas Pai '17)
 This is a general information website for prospective and current PMCS members. It is based on a Twitter Bootstrap template.
