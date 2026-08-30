@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="PMCS hero slide">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#111111"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="25%" cy="55%" r="70%">
+      <stop offset="0" stop-color="rgba(232,119,34,0.20)"/>
+      <stop offset="1" stop-color="rgba(232,119,34,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.9">
+    <path d="M0 760C200 630 360 680 520 610c180-80 280-250 520-250 250 0 360 150 560 70v220H0z" fill="rgba(232,119,34,0.10)"/>
+    <path d="M0 820c220-120 420-80 620-160 180-70 260-260 520-260 210 0 330 120 460 80" fill="none" stroke="rgba(232,119,34,0.55)" stroke-width="8"/>
+  </g>
+  <text x="110" y="150" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial" font-size="54" font-weight="800" fill="#ffffff">Competition " Travel " Community</text>
+  <text x="110" y="220" font-family="system-ui,-apple-system,Segoe UI,Roboto,Arial" font-size="28" fill="rgba(240,236,228,0.72)">Placeholder hero image.</text>
+</svg>
