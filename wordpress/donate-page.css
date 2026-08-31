@@ -1,4 +1,4 @@
-.pmcs-page {
+.page-id-71 .pmcs-page {
   --pmcs-orange: #e87722;
   --pmcs-orange-dark: #c4601a;
   --pmcs-black: #0a0a0a;
@@ -13,10 +13,10 @@
   background: var(--pmcs-black);
 }
 
-.pmcs-page * { box-sizing: border-box; }
-.pmcs-page a { text-decoration: none; }
+.page-id-71 .pmcs-page * { box-sizing: border-box; }
+.page-id-71 .pmcs-page a { text-decoration: none; }
 
-.pmcs-header {
+.page-id-71 .pmcs-header {
   position: relative;
   padding: 80px 0 50px;
   background: #ffffff;
@@ -25,14 +25,14 @@
   overflow: hidden;
 }
 
-.pmcs-header::before {
+.page-id-71 .pmcs-header::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 80% 35%, rgba(232,119,34,0.12), transparent 34%);
 }
 
-.pmcs-header-inner {
+.page-id-71 .pmcs-header-inner {
   position: relative;
   z-index: 1;
   max-width: 1200px;
@@ -40,7 +40,7 @@
   padding: 0 24px;
 }
 
-.pmcs-header-kicker {
+.page-id-71 .pmcs-header-kicker {
   color: var(--pmcs-orange);
   font-size: 11px;
   font-weight: 800;
@@ -48,7 +48,7 @@
   text-transform: uppercase;
 }
 
-.pmcs-header h1 {
+.page-id-71 .pmcs-header h1 {
   margin: 12px 0 0;
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: clamp(3rem, 7vw, 6rem);
@@ -57,9 +57,9 @@
   color: #0a0a0a;
 }
 
-.pmcs-header .pmcs-accent { color: var(--pmcs-orange); }
+.page-id-71 .pmcs-header .page-id-71 .pmcs-accent { color: var(--pmcs-orange); }
 
-.pmcs-hero-image {
+.page-id-71 .pmcs-hero-image {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
@@ -67,19 +67,19 @@
   padding: 0;
 }
 
-.pmcs-lightbox {
+.page-id-71 .pmcs-lightbox {
   background: #ffffff;
   color: #0a0a0a;
 }
 
-.pmcs-content {
+.page-id-71 .pmcs-content {
   max-width: 760px;
   margin: 0 auto;
   padding: 52px 24px 64px;
   text-align: center;
 }
 
-.pmcs-section-label {
+.page-id-71 .pmcs-section-label {
   color: var(--pmcs-orange);
   font-size: 11px;
   font-weight: 800;
@@ -87,7 +87,7 @@
   text-transform: uppercase;
 }
 
-.pmcs-heading {
+.page-id-71 .pmcs-heading {
   margin: 12px 0 18px;
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -96,14 +96,14 @@
   color: #0a0a0a;
 }
 
-.pmcs-copy {
+.page-id-71 .pmcs-copy {
   margin: 0 0 18px;
   font-size: 1rem;
   line-height: 1.8;
   color: rgba(0,0,0,0.75);
 }
 
-.pmcs-donate-row {
+.page-id-71 .pmcs-donate-row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +112,7 @@
   margin-top: 26px;
 }
 
-.pmcs-btn {
+.page-id-71 .pmcs-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -125,17 +125,17 @@
   transition: .2s ease;
 }
 
-.pmcs-btn-primary {
+.page-id-71 .pmcs-btn-primary {
   background: var(--pmcs-orange);
   color: var(--pmcs-white);
 }
 
-.pmcs-btn-primary:hover {
+.page-id-71 .pmcs-btn-primary:hover {
   background: var(--pmcs-orange-dark);
   transform: translateY(-2px);
 }
 
-.pmcs-mini-note {
+.page-id-71 .pmcs-mini-note {
   color: rgba(0,0,0,0.7);
   font-size: 0.95rem;
 }

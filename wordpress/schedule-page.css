@@ -1,4 +1,4 @@
-.pmcs-page {
+.page-id-73 .pmcs-page {
   --pmcs-orange: #e87722;
   --pmcs-orange-dark: #c4601a;
   --pmcs-black: #0a0a0a;
@@ -13,8 +13,8 @@
   background: var(--pmcs-black);
 }
 
-.pmcs-page * { box-sizing: border-box; }
-.pmcs-header {
+.page-id-73 .pmcs-page * { box-sizing: border-box; }
+.page-id-73 .pmcs-header {
   position: relative;
   padding: 80px 0 50px;
   background: #ffffff;
@@ -23,14 +23,14 @@
   overflow: hidden;
 }
 
-.pmcs-header::before {
+.page-id-73 .pmcs-header::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 80% 35%, rgba(232,119,34,0.12), transparent 34%);
 }
 
-.pmcs-header-inner {
+.page-id-73 .pmcs-header-inner {
   position: relative;
   z-index: 1;
   max-width: 1200px;
@@ -38,7 +38,7 @@
   padding: 0 24px;
 }
 
-.pmcs-header-kicker {
+.page-id-73 .pmcs-header-kicker {
   color: var(--pmcs-orange);
   font-size: 11px;
   font-weight: 800;
@@ -46,7 +46,7 @@
   text-transform: uppercase;
 }
 
-.pmcs-header h1 {
+.page-id-73 .pmcs-header h1 {
   margin: 12px 0 0;
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: clamp(3rem, 7vw, 6rem);
@@ -55,15 +55,15 @@
   color: #0a0a0a;
 }
 
-.pmcs-header .pmcs-accent { color: var(--pmcs-orange); }
+.page-id-73 .pmcs-header .page-id-73 .pmcs-accent { color: var(--pmcs-orange); }
 
-.pmcs-light-strip {
+.page-id-73 .pmcs-light-strip {
   background: #ffffff;
   color: #0a0a0a;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.pmcs-tabs {
+.page-id-73 .pmcs-tabs {
   max-width: 1200px;
   margin: 0 auto;
   padding: 18px 24px 0;
@@ -72,7 +72,7 @@
   gap: 10px;
 }
 
-.pmcs-tab {
+.page-id-73 .pmcs-tab {
   padding: 10px 16px;
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,0.12);
@@ -85,26 +85,26 @@
   cursor: pointer;
 }
 
-.pmcs-tab.active {
+.page-id-73 .pmcs-tab.active {
   background: var(--pmcs-orange);
   border-color: var(--pmcs-orange);
   color: var(--pmcs-white);
 }
 
-.pmcs-schedule-wrap {
+.page-id-73 .pmcs-schedule-wrap {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 24px 64px;
 }
 
-.pmcs-year-block { display: none; }
-.pmcs-year-block.visible { display: block; }
+.page-id-73 .pmcs-year-block { display: none; }
+.page-id-73 .pmcs-year-block.visible { display: block; }
 
-.pmcs-season {
+.page-id-73 .pmcs-season {
   margin-bottom: 36px;
 }
 
-.pmcs-season-title {
+.page-id-73 .pmcs-season-title {
   margin-bottom: 14px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--pmcs-border);
@@ -114,20 +114,20 @@
   color: var(--pmcs-orange);
 }
 
-.pmcs-table-wrap {
+.page-id-73 .pmcs-table-wrap {
   overflow-x: auto;
   border: 1px solid var(--pmcs-border);
   border-radius: 12px;
 }
 
-table.pmcs-schedule {
+table.page-id-73 .pmcs-schedule {
   width: 100%;
   border-collapse: collapse;
   min-width: 760px;
   background: rgba(255,255,255,0.01);
 }
 
-table.pmcs-schedule thead td {
+table.page-id-73 .pmcs-schedule thead td {
   padding: 12px 16px;
   background: var(--pmcs-surface-2);
   color: var(--pmcs-muted);
@@ -137,23 +137,23 @@ table.pmcs-schedule thead td {
   text-transform: uppercase;
 }
 
-table.pmcs-schedule tbody td {
+table.page-id-73 .pmcs-schedule tbody td {
   padding: 14px 16px;
   border-top: 1px solid var(--pmcs-border);
   color: var(--pmcs-text);
   font-size: 15px;
 }
 
-.pmcs-result-win { color: #69d98d; font-weight: 700; }
-.pmcs-result-loss { color: #f58f8f; font-weight: 700; }
-.pmcs-result-draw { color: var(--pmcs-orange); font-weight: 700; }
+.page-id-73 .pmcs-result-win { color: #69d98d; font-weight: 700; }
+.page-id-73 .pmcs-result-loss { color: #f58f8f; font-weight: 700; }
+.page-id-73 .pmcs-result-draw { color: var(--pmcs-orange); font-weight: 700; }
 
 @media (max-width: 680px) {
-  .pmcs-tabs {
+  .page-id-73 .pmcs-tabs {
     gap: 8px;
   }
 
-  .pmcs-tab {
+  .page-id-73 .pmcs-tab {
     font-size: 10px;
     letter-spacing: .1em;
     padding: 9px 12px;

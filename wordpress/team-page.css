@@ -1,4 +1,4 @@
-.pmcs-page {
+.page-id-67 .pmcs-page {
   --pmcs-orange: #e87722;
   --pmcs-orange-dark: #c4601a;
   --pmcs-black: #0a0a0a;
@@ -13,8 +13,8 @@
   background: var(--pmcs-black);
 }
 
-.pmcs-page * { box-sizing: border-box; }
-.pmcs-header {
+.page-id-67 .pmcs-page * { box-sizing: border-box; }
+.page-id-67 .pmcs-header {
   position: relative;
   padding: 80px 0 48px;
   background: #ffffff;
@@ -23,14 +23,14 @@
   overflow: hidden;
 }
 
-.pmcs-header::before {
+.page-id-67 .pmcs-header::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 80% 35%, rgba(232,119,34,0.12), transparent 34%);
 }
 
-.pmcs-header-inner {
+.page-id-67 .pmcs-header-inner {
   position: relative;
   z-index: 1;
   max-width: 1200px;
@@ -38,7 +38,7 @@
   padding: 0 24px;
 }
 
-.pmcs-header-kicker {
+.page-id-67 .pmcs-header-kicker {
   color: var(--pmcs-orange);
   font-size: 11px;
   font-weight: 800;
@@ -46,7 +46,7 @@
   text-transform: uppercase;
 }
 
-.pmcs-header h1 {
+.page-id-67 .pmcs-header h1 {
   margin: 12px 0 0;
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: clamp(3rem, 7vw, 6rem);
@@ -55,21 +55,21 @@
   color: #0a0a0a;
 }
 
-.pmcs-header .pmcs-accent { color: var(--pmcs-orange); }
+.page-id-67 .pmcs-header .page-id-67 .pmcs-accent { color: var(--pmcs-orange); }
 
-.pmcs-light-strip {
+.page-id-67 .pmcs-light-strip {
   background: #ffffff;
   color: #0a0a0a;
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.pmcs-section {
+.page-id-67 .pmcs-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 52px 24px 12px;
 }
 
-.pmcs-section-label {
+.page-id-67 .pmcs-section-label {
   color: var(--pmcs-orange);
   font-size: 11px;
   font-weight: 800;
@@ -77,7 +77,7 @@
   text-transform: uppercase;
 }
 
-.pmcs-heading {
+.page-id-67 .pmcs-heading {
   margin: 12px 0 10px;
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -86,26 +86,26 @@
   color: #0a0a0a;
 }
 
-.pmcs-divider {
+.page-id-67 .pmcs-divider {
   width: 56px;
   height: 3px;
   background: var(--pmcs-orange);
   margin-top: 18px;
 }
 
-.pmcs-leadership {
+.page-id-67 .pmcs-leadership {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 24px 32px;
 }
 
-.pmcs-grid {
+.page-id-67 .pmcs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
-.pmcs-card {
+.page-id-67 .pmcs-card {
   background: var(--pmcs-surface);
   border: 1px solid var(--pmcs-border);
   border-radius: 14px;
@@ -113,12 +113,12 @@
   transition: transform .2s ease, border-color .2s ease;
 }
 
-.pmcs-card:hover {
+.page-id-67 .pmcs-card:hover {
   transform: translateY(-5px);
   border-color: rgba(232,119,34,0.5);
 }
 
-.pmcs-card img {
+.page-id-67 .pmcs-card img {
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -127,12 +127,12 @@
   background: rgba(255,255,255,0.04);
 }
 
-.pmcs-card-info {
+.page-id-67 .pmcs-card-info {
   padding: 18px 16px 20px;
   text-align: center;
 }
 
-.pmcs-card-name {
+.page-id-67 .pmcs-card-name {
   font-family: "Bebas Neue", Impact, sans-serif;
   font-size: 1.8rem;
   line-height: 1;
@@ -140,7 +140,7 @@
   color: var(--pmcs-white);
 }
 
-.pmcs-card-role {
+.page-id-67 .pmcs-card-role {
   margin-top: 8px;
   color: var(--pmcs-orange);
   font-size: 11px;
@@ -149,14 +149,14 @@
   text-transform: uppercase;
 }
 
-.pmcs-card-year {
+.page-id-67 .pmcs-card-year {
   margin-top: 6px;
   color: var(--pmcs-muted);
   font-size: 13px;
 }
 
 @media (max-width: 640px) {
-  .pmcs-grid {
+  .page-id-67 .pmcs-grid {
     grid-template-columns: 1fr;
   }
 }
