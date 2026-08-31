@@ -1,3 +1,20 @@
+<nav class="pmcs-nav">
+  <div class="pmcs-nav-inner">
+    <a class="pmcs-logo" href="/">PMCS</a>
+    <button class="pmcs-nav-toggle" aria-label="Open menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="pmcs-nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/team">Officers</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/tryouts">Tryouts</a></li>
+      <li class="pmcs-nav-donate"><a href="/donate">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+
 <section class="pmcs-page pmcs-hero">
   <div class="pmcs-hero-glow"></div>
   <div class="pmcs-hero-grid"></div>
@@ -12,8 +29,20 @@
           <a class="pmcs-btn pmcs-btn-secondary" href="/about">Learn More</a>
         </div>
       </div>
-      <div class="pmcs-hero-photo-wrap">
-        <img class="pmcs-hero-photo" src="https://yourdomain.com/wp-content/uploads/2026/08/headshot-gif.gif" alt="PMCS headshot" />
+
+      <div class="pmcs-carousel-wrap">
+        <div class="pmcs-carousel" aria-label="Team photo carousel">
+          <img class="active" src="/wp-content/uploads/2026/08/LP2025Fall.jpg" alt="Team training in fall 2025">
+          <img src="/wp-content/uploads/2026/08/Ivies2025.jpg" alt="PMCS at the Ivies">
+          <img src="/wp-content/uploads/2026/08/Ivies2025pt2.jpg" alt="PMCS at the Ivies again">
+          <button class="pmcs-carousel-btn pmcs-carousel-prev" type="button" aria-label="Previous slide">&#8249;</button>
+          <button class="pmcs-carousel-btn pmcs-carousel-next" type="button" aria-label="Next slide">&#8250;</button>
+          <div class="pmcs-carousel-dots">
+            <button class="pmcs-carousel-dot active" type="button" aria-label="Go to slide 1"></button>
+            <button class="pmcs-carousel-dot" type="button" aria-label="Go to slide 2"></button>
+            <button class="pmcs-carousel-dot" type="button" aria-label="Go to slide 3"></button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -61,3 +90,32 @@
     </div>
   </div>
 </section>
+
+<script>
+  const navToggle = document.querySelector('.pmcs-nav-toggle');
+  const navLinks = document.querySelector('.pmcs-nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  const carouselImages = Array.from(document.querySelectorAll('.pmcs-carousel img'));
+  const carouselDots = Array.from(document.querySelectorAll('.pmcs-carousel-dot'));
+  let carouselIndex = 0;
+
+  function showCarouselSlide(index) {
+    carouselIndex = (index + carouselImages.length) % carouselImages.length;
+    carouselImages.forEach((img, i) => img.classList.toggle('active', i === carouselIndex));
+    carouselDots.forEach((dot, i) => dot.classList.toggle('active', i === carouselIndex));
+  }
+
+  const prevButton = document.querySelector('.pmcs-carousel-prev');
+  const nextButton = document.querySelector('.pmcs-carousel-next');
+
+  if (prevButton) prevButton.addEventListener('click', () => showCarouselSlide(carouselIndex - 1));
+  if (nextButton) nextButton.addEventListener('click', () => showCarouselSlide(carouselIndex + 1));
+  carouselDots.forEach((dot, i) => dot.addEventListener('click', () => showCarouselSlide(i)));
+  setInterval(() => showCarouselSlide(carouselIndex + 1), 5000);
+</script>

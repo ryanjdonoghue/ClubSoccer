@@ -1,3 +1,20 @@
+<nav class="pmcs-nav">
+  <div class="pmcs-nav-inner">
+    <a class="pmcs-logo" href="/">PMCS</a>
+    <button class="pmcs-nav-toggle" aria-label="Open menu" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="pmcs-nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/team">Officers</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/tryouts" class="active">Tryouts</a></li>
+      <li class="pmcs-nav-donate"><a href="/donate">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+
 <section class="pmcs-page pmcs-header">
   <div class="pmcs-header-inner">
     <div class="pmcs-header-kicker">2026 Season</div>
@@ -51,3 +68,14 @@
     </div>
   </div>
 </section>
+
+<script>
+  const navToggle = document.querySelector('.pmcs-nav-toggle');
+  const navLinks = document.querySelector('.pmcs-nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+  }
+</script>
