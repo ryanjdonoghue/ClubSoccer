@@ -1,0 +1,141 @@
+.pmcs-page {
+  --pmcs-orange: #e87722;
+  --pmcs-orange-dark: #c4601a;
+  --pmcs-black: #0a0a0a;
+  --pmcs-surface: #111111;
+  --pmcs-surface-2: #1a1a1a;
+  --pmcs-border: rgba(255,255,255,0.12);
+  --pmcs-text: #f2efe8;
+  --pmcs-muted: #b7b0a5;
+  --pmcs-white: #ffffff;
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--pmcs-text);
+  background: var(--pmcs-black);
+}
+
+.pmcs-page * { box-sizing: border-box; }
+.pmcs-page a { text-decoration: none; }
+
+.pmcs-header {
+  position: relative;
+  padding: 80px 0 50px;
+  background: #ffffff;
+  color: #0a0a0a;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.pmcs-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 35%, rgba(232,119,34,0.12), transparent 34%);
+}
+
+.pmcs-header-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pmcs-header-kicker {
+  color: var(--pmcs-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.pmcs-header h1 {
+  margin: 12px 0 0;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: .04em;
+  color: #0a0a0a;
+}
+
+.pmcs-header .pmcs-accent { color: var(--pmcs-orange); }
+
+.pmcs-hero-image {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  display: block;
+  padding: 0;
+}
+
+.pmcs-lightbox {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+.pmcs-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 52px 24px 64px;
+  text-align: center;
+}
+
+.pmcs-section-label {
+  color: var(--pmcs-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.pmcs-heading {
+  margin: 12px 0 18px;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: .04em;
+  color: #0a0a0a;
+}
+
+.pmcs-copy {
+  margin: 0 0 18px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(0,0,0,0.75);
+}
+
+.pmcs-donate-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.pmcs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: .2s ease;
+}
+
+.pmcs-btn-primary {
+  background: var(--pmcs-orange);
+  color: var(--pmcs-white);
+}
+
+.pmcs-btn-primary:hover {
+  background: var(--pmcs-orange-dark);
+  transform: translateY(-2px);
+}
+
+.pmcs-mini-note {
+  color: rgba(0,0,0,0.7);
+  font-size: 0.95rem;
+}

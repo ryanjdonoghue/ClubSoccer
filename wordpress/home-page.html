@@ -1,0 +1,359 @@
+<style>
+  .pmcs-page {
+    --pmcs-orange: #e87722;
+    --pmcs-orange-dark: #c4601a;
+    --pmcs-black: #0a0a0a;
+    --pmcs-surface: #121212;
+    --pmcs-surface-2: #1a1a1a;
+    --pmcs-border: rgba(255,255,255,0.12);
+    --pmcs-text: #f2efe8;
+    --pmcs-muted: #b7b0a5;
+    --pmcs-white: #ffffff;
+    --pmcs-radius: 12px;
+    --pmcs-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--pmcs-text);
+    background: var(--pmcs-black);
+  }
+
+  .pmcs-page * { box-sizing: border-box; }
+  .pmcs-page a { text-decoration: none; }
+
+  .pmcs-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .pmcs-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--pmcs-black);
+    border-bottom: 1px solid var(--pmcs-border);
+  }
+
+  .pmcs-hero-grid,
+  .pmcs-hero-glow {
+    position: absolute;
+    inset: 0;
+  }
+
+  .pmcs-hero-glow {
+    background: radial-gradient(circle at 70% 45%, rgba(232,119,34,0.18), transparent 42%),
+                radial-gradient(circle at 20% 80%, rgba(232,119,34,0.08), transparent 32%);
+  }
+
+  .pmcs-hero-grid {
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(circle at center, black 28%, transparent 78%);
+    -webkit-mask-image: radial-gradient(circle at center, black 28%, transparent 78%);
+  }
+
+  .pmcs-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 24px 40px;
+  }
+
+  .pmcs-hero-layout {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .pmcs-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: var(--pmcs-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  .pmcs-kicker::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: var(--pmcs-orange);
+    display: block;
+  }
+
+  .pmcs-title {
+    margin: 0 0 18px;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: .9;
+    letter-spacing: .04em;
+    color: var(--pmcs-white);
+  }
+
+  .pmcs-title .pmcs-accent { color: var(--pmcs-orange); }
+
+  .pmcs-subtitle {
+    max-width: 500px;
+    margin: 0 0 28px;
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: var(--pmcs-muted);
+  }
+
+  .pmcs-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .pmcs-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    transition: .2s ease;
+  }
+
+  .pmcs-btn-primary {
+    background: var(--pmcs-orange);
+    color: var(--pmcs-white);
+  }
+
+  .pmcs-btn-primary:hover {
+    background: var(--pmcs-orange-dark);
+    transform: translateY(-2px);
+  }
+
+  .pmcs-btn-secondary {
+    border: 1px solid var(--pmcs-border);
+    color: var(--pmcs-text);
+    background: transparent;
+  }
+
+  .pmcs-btn-secondary:hover {
+    background: rgba(255,255,255,0.04);
+    transform: translateY(-2px);
+  }
+
+  .pmcs-hero-photo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pmcs-hero-photo {
+    width: 100%;
+    max-width: 440px;
+    border-radius: 18px;
+    border: 1px solid var(--pmcs-border);
+    box-shadow: var(--pmcs-shadow);
+  }
+
+  .pmcs-stat-bar {
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .pmcs-stats {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(0,0,0,0.08);
+  }
+
+  .pmcs-stat {
+    background: #fff;
+    padding: 28px 18px;
+    text-align: center;
+  }
+
+  .pmcs-stat-value {
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--pmcs-orange);
+  }
+
+  .pmcs-stat-label {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.62);
+  }
+
+  .pmcs-story {
+    padding: 82px 0;
+    background: var(--pmcs-black);
+  }
+
+  .pmcs-story-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pmcs-section-label {
+    color: var(--pmcs-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+  }
+
+  .pmcs-heading {
+    margin: 12px 0 18px;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    letter-spacing: .04em;
+    line-height: 1;
+    color: var(--pmcs-white);
+  }
+
+  .pmcs-copy {
+    color: var(--pmcs-muted);
+    font-size: 1.02rem;
+    line-height: 1.85;
+  }
+
+  .pmcs-cta-band {
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    color: #0a0a0a;
+    padding: 64px 0;
+  }
+
+  .pmcs-cta-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pmcs-cta-inner .pmcs-heading,
+  .pmcs-cta-inner .pmcs-section-label,
+  .pmcs-cta-inner .pmcs-copy {
+    color: #0a0a0a;
+  }
+
+  .pmcs-cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .pmcs-cta-secondary {
+    border: 1px solid rgba(0,0,0,0.2);
+    color: #0a0a0a;
+    background: transparent;
+  }
+
+  .pmcs-cta-secondary:hover {
+    background: rgba(0,0,0,0.04);
+  }
+
+  @media (max-width: 900px) {
+    .pmcs-hero-layout {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .pmcs-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pmcs-actions,
+    .pmcs-cta-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .pmcs-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
+
+<section class="pmcs-page pmcs-hero">
+  <div class="pmcs-hero-glow"></div>
+  <div class="pmcs-hero-grid"></div>
+  <div class="pmcs-hero-inner">
+    <div class="pmcs-hero-layout">
+      <div>
+        <div class="pmcs-kicker">Princeton Men's Club Soccer</div>
+        <h1 class="pmcs-title">S<span class="pmcs-accent">üjx</span></h1>
+        <p class="pmcs-subtitle">An elite club sports team competing across the northeastern United States and beyond. We train hard, play together, and represent Princeton with pride.</p>
+        <div class="pmcs-actions">
+          <a class="pmcs-btn pmcs-btn-primary" href="#tryouts">Register for Tryouts</a>
+          <a class="pmcs-btn pmcs-btn-secondary" href="#about">Learn More</a>
+        </div>
+      </div>
+      <div class="pmcs-hero-photo-wrap">
+        <img class="pmcs-hero-photo" src="https://yourdomain.com/wp-content/uploads/2026/08/headshot-gif.gif" alt="PMCS headshot" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pmcs-page pmcs-stat-bar">
+  <div class="pmcs-stats">
+    <div class="pmcs-stat">
+      <div class="pmcs-stat-value">3×</div>
+      <div class="pmcs-stat-label">Practices Per Week</div>
+    </div>
+    <div class="pmcs-stat">
+      <div class="pmcs-stat-value">7</div>
+      <div class="pmcs-stat-label">Ivy League Rivals</div>
+    </div>
+    <div class="pmcs-stat">
+      <div class="pmcs-stat-value">NIRSA</div>
+      <div class="pmcs-stat-label">Region 1 NJ Division</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="pmcs-page pmcs-story">
+  <div class="pmcs-section">
+    <div class="pmcs-story-inner">
+      <div class="pmcs-section-label">Who We Are</div>
+      <h2 class="pmcs-heading">Welcome to <span class="pmcs-accent">PMCS</span></h2>
+      <p class="pmcs-copy">We're a group of soccer players who compete with colleges all over the northeastern United States and beyond. Our members come from all over the world, bound together by a mutual love of the beautiful game.</p>
+      <p class="pmcs-copy" style="margin-top: 14px;">When we're not practicing and competing, we love watching games together and having a great time as a team.</p>
+      <div style="margin-top: 24px;">
+        <a class="pmcs-btn pmcs-btn-secondary" href="/about">About the Team →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tryouts" class="pmcs-page pmcs-cta-band">
+  <div class="pmcs-cta-inner">
+    <div class="pmcs-section-label">Join the Team</div>
+    <h2 class="pmcs-heading">Ready to <span class="pmcs-accent">Tryout?</span></h2>
+    <p class="pmcs-copy">We hold annual tryouts every fall. Missed them? Contact us to organize a private tryout during the off-season.</p>
+    <div class="pmcs-cta-buttons">
+      <a class="pmcs-btn pmcs-btn-primary" href="/tryouts">Register Now</a>
+      <a class="pmcs-btn pmcs-cta-secondary" href="/donate">Support the Team</a>
+    </div>
+  </div>
+</section>

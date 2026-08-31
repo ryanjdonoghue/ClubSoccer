@@ -1,0 +1,161 @@
+.pmcs-page {
+  --pmcs-orange: #e87722;
+  --pmcs-orange-dark: #c4601a;
+  --pmcs-black: #0a0a0a;
+  --pmcs-surface: #111111;
+  --pmcs-surface-2: #1a1a1a;
+  --pmcs-border: rgba(255,255,255,0.12);
+  --pmcs-text: #f2efe8;
+  --pmcs-muted: #b7b0a5;
+  --pmcs-white: #ffffff;
+  font-family: "DM Sans", Arial, sans-serif;
+  color: var(--pmcs-text);
+  background: var(--pmcs-black);
+}
+
+.pmcs-page * { box-sizing: border-box; }
+.pmcs-header {
+  position: relative;
+  padding: 80px 0 50px;
+  background: #ffffff;
+  color: #0a0a0a;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.pmcs-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 35%, rgba(232,119,34,0.12), transparent 34%);
+}
+
+.pmcs-header-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pmcs-header-kicker {
+  color: var(--pmcs-orange);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.pmcs-header h1 {
+  margin: 12px 0 0;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+  letter-spacing: .04em;
+  color: #0a0a0a;
+}
+
+.pmcs-header .pmcs-accent { color: var(--pmcs-orange); }
+
+.pmcs-light-strip {
+  background: #ffffff;
+  color: #0a0a0a;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.pmcs-tabs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pmcs-tab {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #f5f5f5;
+  color: rgba(0,0,0,0.65);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.pmcs-tab.active {
+  background: var(--pmcs-orange);
+  border-color: var(--pmcs-orange);
+  color: var(--pmcs-white);
+}
+
+.pmcs-schedule-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.pmcs-year-block { display: none; }
+.pmcs-year-block.visible { display: block; }
+
+.pmcs-season {
+  margin-bottom: 36px;
+}
+
+.pmcs-season-title {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--pmcs-border);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 2rem;
+  letter-spacing: .08em;
+  color: var(--pmcs-orange);
+}
+
+.pmcs-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--pmcs-border);
+  border-radius: 12px;
+}
+
+table.pmcs-schedule {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  background: rgba(255,255,255,0.01);
+}
+
+table.pmcs-schedule thead td {
+  padding: 12px 16px;
+  background: var(--pmcs-surface-2);
+  color: var(--pmcs-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+table.pmcs-schedule tbody td {
+  padding: 14px 16px;
+  border-top: 1px solid var(--pmcs-border);
+  color: var(--pmcs-text);
+  font-size: 15px;
+}
+
+.pmcs-result-win { color: #69d98d; font-weight: 700; }
+.pmcs-result-loss { color: #f58f8f; font-weight: 700; }
+.pmcs-result-draw { color: var(--pmcs-orange); font-weight: 700; }
+
+@media (max-width: 680px) {
+  .pmcs-tabs {
+    gap: 8px;
+  }
+
+  .pmcs-tab {
+    font-size: 10px;
+    letter-spacing: .1em;
+    padding: 9px 12px;
+  }
+}
